@@ -1,0 +1,14 @@
+### Fix Git in Dev container
+
+
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+ssh-add ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub
+
+## Click on "New SSH key", provide a meaningful title, and paste the contents of your public key (id_rsa.pub) into the "Key" field.
+
+ssh -T git@github.com
+Hi <username>! You've successfully authenticated, but GitHub does not provide shell access.
+
+
+git config --global commit.gpgsign false
